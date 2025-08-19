@@ -1,0 +1,5 @@
+{
+  "python.analysis.extraPaths": ["${BIRTHDAY_PLANNER}"],
+  "python.envFile": "${BIRTHDAY_PLANNER}/.env"
+  
+}

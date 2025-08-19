@@ -1,0 +1,7 @@
+python-dotenv
+pydantic
+google-generativeai
+reportlab
+streamlit 
+google-genai 
+requests
