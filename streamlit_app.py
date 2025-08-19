@@ -157,7 +157,7 @@ def _enforce_limits(payload: Any, max_bullets: int = DEFAULT_MAX_BULLETS, max_ch
         return payload
     return payload  # fallback
 
-# ---- dict → kısa Markdown dönüştürücüler ----
+# --------
 def _as_inline_text(v: Any) -> str:
     if isinstance(v, list):
         return ", ".join([_as_inline_text(x) for x in v])
@@ -172,7 +172,7 @@ def _dict_to_markdown(d: Any) -> str:
     """Dict outputs should be short, convert them into a conversational Markdown style."""
     if not isinstance(d, dict):
         return str(d)
-    # {"menu": {...}} gibi tek anahtar varsa içeriği aç
+    
     if len(d) == 1 and "menu" in d and isinstance(d["menu"], dict):
         d = d["menu"]
     lines: List[str] = []
